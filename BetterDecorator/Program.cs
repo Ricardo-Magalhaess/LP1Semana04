@@ -2,15 +2,24 @@
 
 namespace BetterDecorator
 {
+    /// <summary>
+    /// O Programa recebe 3 valores uma str, char e um int
+    /// devolve a char e a string dependendo do int
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// converte os argumentos para char e int
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             if (args.Length != 3)
             {
-                Concide();
+                Concede();
                 
-            }else {
+            }
+            else {
 
             char o = char.Parse(args[1]);
             int a = int.Parse(args[2]);
@@ -18,12 +27,16 @@ namespace BetterDecorator
             
             }
 
-            private static void Concide(){
+        static void Concede(){
             Console.WriteLine(Decor("User did not specify args!",'=',3));
-            }
+        }
 
-            private static string Decor(string s, char dec, int i)
-            {
+        /// <summary>
+        /// executa dois ifs para por uma char
+        /// devolve a char e a string dependendo do int
+        /// </summary>
+        static string Decor(string s, char dec, int i)
+        {
             string a = "";
             string b = "";
             for (int k = 0; k < i; k++){
@@ -35,7 +48,8 @@ namespace BetterDecorator
             }
                 
             return $"{a} {s} {b}";     
-            }
+        }
+        
         }
     }
 }
